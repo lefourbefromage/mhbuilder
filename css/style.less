@@ -1,0 +1,298 @@
+@import "../app/lesshat/build/lesshat.less";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+/* ---------------------------------------------------------------------------------- FONTS */
+
+@gray: #9e9ca1;
+@dark-gray: #4c4948;
+@green: #cfee1d;
+@brown: #28201e;
+@red: #e24747;
+@black: #000000;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  
+  background-color: @black;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.navbar {
+  background-color: @brown;
+  background-image: url('img/pattern.jpg');
+  background-size: cover;
+  height: 8rem;
+  box-shadow: 0px 0px 10px 0px rgba(207, 238, 29, 0.2);
+  
+  .navbar-logo {
+	width: 26rem;
+	margin-top: 8rem;
+	height: 0;
+	padding-bottom: 11%;
+	background: url(img/mh-world-logo.png) no-repeat center;
+	background-size: auto 100%;
+  }
+}
+
+.preview-section {
+  background: url("img/background.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 10rem;
+  
+  .preview-container {
+	padding: 0;
+	display: flex;
+	
+	.preview-build {
+	  width: 35%;
+	  display: flex;
+	  flex-direction: column;
+	  
+	  .preview-row {
+		display: flex;
+		
+		.item-wrapper {
+		  width: 33%;
+		  padding: .5rem;
+		  
+		  .item {
+			height: 0;
+			padding-bottom: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+			border-radius: 1rem;
+			border: 1px solid @dark-gray;
+			position: relative;
+			
+			.img-wrapper {
+			  position: absolute;
+			  width: 100%;
+			  height: 100%;
+			  top: 0;
+			  left: 0;
+			  padding: .5rem;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  
+			  img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			  }
+			  
+			  .item-decoration-slots {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 50%;
+				
+				ul {
+				  padding: 0;
+				  list-style: none;
+				  display: flex;
+				  justify-content: flex-end;
+				  margin: 0;
+				  li {
+					width: 33%;
+					text-align: center;
+					padding: 3px;
+				  }
+				}
+			  }
+			}
+		  }
+		  
+		  &.item-small {
+			width: 20%;
+		  }
+		}
+		
+		&#second-row,
+		&#first-row {
+		  justify-content: center;
+		  align-items: flex-end;
+		}
+		
+		&#third-row {
+		  justify-content: flex-end;
+		}
+	  }
+	}
+	
+	.preview-informations {
+	  width: 65%;
+	  display: flex;
+	  padding-left: 4rem;
+	  
+	  
+	  .skills-informations-wrapper {
+		width: 55%;
+		padding: 1rem;
+		
+		
+		.skills-informations {
+		  margin-bottom: 3rem;
+		  padding-bottom: 0;
+		  .skill-list {
+			padding: 0;
+			list-style: none;
+			margin-bottom: 0;
+			
+			.skill-item {
+			  display: flex;
+			  padding: 0 2rem 0  3rem;
+			  align-items:center;
+			  position:relative;
+			  
+			  background:url('img/ornement_list_item.png') no-repeat;
+			  background-position: calc(~"100% - 5px") 5px;
+			  
+			  &:before, &:after{
+				content:'';
+				height: 50%;
+				width: 100%;
+				position:absolute;
+				left:0;
+			  }
+			  
+			  &:before{
+				top:0;
+				background: rgba(45, 45, 45, 0.3);
+				z-index: 1;
+			  }
+			  
+			  &:after{
+				bottom:0;
+				background: rgba(45, 45, 45, 0.56);
+				z-index: 1;
+			  }
+			  
+			  .skill-img {
+				position:relative;
+				z-index: 5;
+				width: 7rem;
+				img {
+				  width: 100%;
+				}
+			  }
+			  
+			  .skill-informations {
+				width: 100%;
+				padding-left: 2rem;
+				
+				h2 {
+				  color: white;
+				  margin: 0;
+				  font-size: 1.9rem;
+				  padding: 1rem 0;
+				  z-index: 5;
+				  position:relative;
+				}
+			 
+				.skill-points {
+				  
+				  display: flex;
+				  justify-content: flex-end;
+				  align-items:center;
+				
+				  ul {
+					list-style: none;
+					margin: 1rem 0;
+					padding: 0 2.5rem;
+					display: flex;
+					position: relative;
+					z-index: 3;
+					background: url("img/arrow_left.png") no-repeat left center, url('img/arrow-right.png') no-repeat right center;
+					background-size: auto 100%;
+				 
+					&:before {
+					  content: '';
+					  height: 3px;
+					  width: calc(~"100% - 3rem");
+					  background-color: #5f5e5e;
+					  position: absolute;
+					  -webkit-transform: translate(-50%, -50%);
+					  -moz-transform: translate(-50%, -50%);
+					  -ms-transform: translate(-50%, -50%);
+					  -o-transform: translate(-50%, -50%);
+					  transform: translate(-50%, -50%);
+					  top: 50%;
+					  left: 50%;
+					  z-index: 4;
+					}
+				 
+					li {
+					  position: relative;
+					  z-index: 5;
+					  background: #383838;
+					  background: -moz-linear-gradient(top, #383838 0%, #5f5e5e 70%);
+					  background: -webkit-linear-gradient(top, #383838 0%, #5f5e5e 70%);
+					  background: linear-gradient(to bottom, #383838 0%, #5f5e5e 70%);
+					  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#383838', endColorstr='#5f5e5e', GradientType=0);
+					  padding: .75rem;
+					  border-radius: 3px;
+					  border: 2px solid #5f5e5e;
+					  margin: 0 2px;
+					
+					  &.active {
+						border: 2px solid #cfee1d;
+						background: #cfee1d;
+						background: -moz-linear-gradient(top, #cfee1d 0%, #b7d21c 70%);
+						background: -webkit-linear-gradient(top, #cfee1d 0%, #b7d21c 70%);
+						background: linear-gradient(to bottom, #cfee1d 0%, #b7d21c 70%);
+						filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfee1d', endColorstr='#b7d21c', GradientType=0);
+					  }
+					}
+				  }
+				  
+				  span {
+					display: block;
+					width: 100%;
+					text-align: right;
+					color: white;
+					font-size: 1.5rem;
+					position: relative;
+					z-index: 5;
+					
+					&.complete{
+					  color:@green;
+					}
+				  }
+				}
+			  }
+			}
+			
+		  }
+		}
+	  }
+	  
+	  .status-informations-wrapper {
+		width: 45%;
+		padding: 1rem;
+	  }
+	  
+	  .status-informations,
+	  .skills-informations {
+		background: url("img/top_large.png") no-repeat left top, url('img/bottom_large.png') no-repeat bottom left;
+		background-color: rgba(0, 0, 0, 0.6);
+		background-size: 100%, 100% .5rem;
+		border: 1px solid @dark-gray;
+		padding: 2rem 0;
+		
+		.title {
+		  text-align: center;
+		  color: @green;
+		  font-size: 2.5rem;
+		  margin-top: 1rem;
+		  letter-spacing: 1px;
+		  margin-bottom: 1rem;
+		  font-weight: bold;
+		}
+	  }
+	}
+  }
+}
