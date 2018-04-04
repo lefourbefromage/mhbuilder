@@ -113,13 +113,14 @@ body {
 }
 .preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item {
   width: 49%;
-  background: #4c4948;
+  background: #000000;
   color: white;
   font-size: 1.6rem;
   padding: 2rem;
-  border: 1px solid #9e9ca1;
+  border: 1px solid #4c4948;
   letter-spacing: 1px;
   outline: none;
+  cursor: pointer;
 }
 .preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item.active {
   border-color: #cfee1d;
@@ -265,3 +266,4 @@ body {
   margin-bottom: 1rem;
   font-weight: bold;
 }
+/*# sourceMappingURL=style.css.map */
