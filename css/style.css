@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+@import "../app/custom_font/style.css";
+/* ---------------------------------------------------------------------------------- FONTS */
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #000000;
+  font-family: 'Noto Sans', sans-serif;
+}
+.navbar {
+  background-color: #28201e;
+  background-image: url('img/pattern.jpg');
+  background-size: cover;
+  height: 8rem;
+  box-shadow: 0px 0px 10px 0px rgba(207, 238, 29, 0.2);
+}
+.navbar .navbar-logo {
+  width: 26rem;
+  margin-top: 8rem;
+  height: 0;
+  padding-bottom: 11%;
+  background: url(img/mh-world-logo.png) no-repeat center;
+  background-size: auto 100%;
+}
+.preview-section {
+  background: url("img/background.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 10rem;
+}
+.preview-section .preview-container {
+  padding: 0;
+  display: flex;
+}
+.preview-section .preview-container .preview-build {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+}
+.preview-section .preview-container .preview-build .preview-row {
+  display: flex;
+}
+.preview-section .preview-container .preview-build .preview-row .item-wrapper {
+  width: 33%;
+  padding: .5rem;
+}
+.preview-section .preview-container .preview-build .preview-row .item-wrapper .item {
+  height: 0;
+  padding-bottom: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  border: 1px solid #4c4948;
+  position: relative;
+}
+.preview-section .preview-container .preview-build .preview-row .item-wrapper .item .img-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview-section .preview-container .preview-build .preview-row .item-wrapper .item .img-wrapper img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.preview-section .preview-container .preview-build .preview-row .item-wrapper .item .img-wrapper .item-decoration-slots {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+}
+.preview-section .preview-container .preview-build .preview-row .item-wrapper .item .img-wrapper .item-decoration-slots ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+.preview-section .preview-container .preview-build .preview-row .item-wrapper .item .img-wrapper .item-decoration-slots ul li {
+  width: 33%;
+  text-align: center;
+  padding: 3px;
+}
+.preview-section .preview-container .preview-build .preview-row .item-wrapper.item-small {
+  width: 20%;
+}
+.preview-section .preview-container .preview-build .preview-row#second-row,
+.preview-section .preview-container .preview-build .preview-row#first-row {
+  justify-content: center;
+  align-items: flex-end;
+}
+.preview-section .preview-container .preview-build .preview-row#third-row {
+  justify-content: flex-end;
+}
+.preview-section .preview-container .preview-informations {
+  width: 60%;
+  display: flex;
+  padding-left: 1rem;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper {
+  width: 60%;
+  padding: 1rem;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item {
+  width: 49%;
+  background: #000000;
+  color: white;
+  font-size: 1.6rem;
+  padding: 2rem;
+  border: 1px solid #4c4948;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all ease 250ms;
+  -moz-transition: all ease 250ms;
+  -o-transition: all ease 250ms;
+  transition: all ease 250ms;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:before {
+  position: absolute;
+  top: 0;
+  left: .4rem;
+  content: '\e901';
+  font-family: 'icomoon' !important;
+  color: #4c4948;
+  -webkit-transition: all ease 250ms;
+  -moz-transition: all ease 250ms;
+  -o-transition: all ease 250ms;
+  transition: all ease 250ms;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:after {
+  position: absolute;
+  bottom: 0;
+  right: .3rem;
+  content: '\e900';
+  font-family: 'icomoon' !important;
+  color: #4c4948;
+  -webkit-transition: all ease 250ms;
+  -moz-transition: all ease 250ms;
+  -o-transition: all ease 250ms;
+  transition: all ease 250ms;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item.active,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:hover,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:focus,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:active {
+  border-color: #cfee1d;
+  color: #cfee1d;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item.active:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:hover:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:focus:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:active:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item.active:after,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:hover:after,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:focus:after,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:active:after {
+  color: #cfee1d;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations {
+  margin-bottom: 3rem;
+  padding-bottom: 0;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item {
+  display: flex;
+  padding: 0 2rem 0 3rem;
+  align-items: center;
+  position: relative;
+  background: url('img/ornement_list_item.png') no-repeat;
+  background-position: calc(100% - 5px) 5px;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item:after {
+  content: '';
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item:before {
+  top: 0;
+  background: rgba(45, 45, 45, 0.5);
+  z-index: 1;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item:after {
+  bottom: 0;
+  background: rgba(45, 45, 45, 0.3);
+  z-index: 1;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-img {
+  position: relative;
+  z-index: 5;
+  width: 7rem;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-img img {
+  width: 100%;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations {
+  width: 100%;
+  padding-left: 2rem;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.9rem;
+  padding: 1rem 0;
+  z-index: 5;
+  position: relative;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations .skill-points {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations .skill-points ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0 2.5rem;
+  display: flex;
+  position: relative;
+  z-index: 3;
+  background: url("img/arrow_left.png") no-repeat left center, url('img/arrow-right.png') no-repeat right center;
+  background-size: auto 100%;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations .skill-points ul:before {
+  content: '';
+  height: 3px;
+  width: calc(100% - 3rem);
+  background-color: #5f5e5e;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations .skill-points ul li {
+  position: relative;
+  z-index: 5;
+  background: #383838;
+  background: -moz-linear-gradient(top, #383838 0%, #5f5e5e 70%);
+  background: -webkit-linear-gradient(top, #383838 0%, #5f5e5e 70%);
+  background: linear-gradient(to bottom, #383838 0%, #5f5e5e 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#383838', endColorstr='#5f5e5e', GradientType=0);
+  padding: .7rem;
+  border-radius: 3px;
+  border: 2px solid #5f5e5e;
+  margin: 0 2px;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations .skill-points ul li.active {
+  border: 2px solid #cfee1d;
+  background: #cfee1d;
+  background: -moz-linear-gradient(top, #cfee1d 0%, #b7d21c 70%);
+  background: -webkit-linear-gradient(top, #cfee1d 0%, #b7d21c 70%);
+  background: linear-gradient(to bottom, #cfee1d 0%, #b7d21c 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfee1d', endColorstr='#b7d21c', GradientType=0);
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations .skill-points span {
+  display: block;
+  width: 100%;
+  text-align: right;
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 5;
+}
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations .skill-points span.complete {
+  color: #cfee1d;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper {
+  width: 40%;
+  padding: 1rem;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-informations:first-child {
+  margin-bottom: 2rem;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-informations .title {
+  margin-bottom: 1.5rem;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper h3 {
+  padding: 1rem 4rem;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li {
+  font-size: 1.5rem;
+  display: flex;
+  padding: .5rem 2rem;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li .status-name {
+  color: #9e9ca1;
+  width: 100%;
+  padding-left: 3rem;
+  position: relative;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li .status-name:before {
+  content: '';
+  height: 100%;
+  width: 2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li .status-value {
+  color: white;
+  position: relative;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li .status-value.negative-value {
+  color: #e24747;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.health .status-name:before {
+  background-image: url('img/elements/mhw-health.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.stamina .status-name:before {
+  background-image: url('img/elements/mhw-stamina.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-raw .status-name:before {
+  background-image: url('img/elements/mhw-attack.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-affinity .status-name:before {
+  background-image: url('img/elements/mhw-affinity.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-name:before {
+  background-image: url('img/elements/mhw-element-damage.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value {
+  padding-left: 2.5rem;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value.disabled:before {
+  content: '';
+  opacity: 0.5;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value:before {
+  content: '';
+  height: 100%;
+  width: 2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value.element-water:before {
+  background-image: url('img/elements/mhw-water-elemental-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value.element-fire:before {
+  background-image: url('img/elements/mhw-fire-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value.element-thunder:before {
+  background-image: url('img/elements/mhw-thunder-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value.element-ice:before {
+  background-image: url('img/elements/mhw-ice-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value.element-dragon:before {
+  background-image: url('img/elements/mhw-dragon-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.attack-element .status-value.negative-value {
+  color: #e24747;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.defense-raw .status-name:before {
+  background-image: url('img/elements/mhw-defense_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.defense-fire .status-name:before {
+  background-image: url('img/elements/mhw-fire-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.defense-water .status-name:before {
+  background-image: url('img/elements/mhw-water-elemental-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.defense-thunder .status-name:before {
+  background-image: url('img/elements/mhw-thunder-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.defense-ice .status-name:before {
+  background-image: url('img/elements/mhw-ice-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .status-list li.defense-dragon .status-name:before {
+  background-image: url('img/elements/mhw-dragon-damage_s.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .decoration-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .decoration-list li {
+  font-size: 1.5rem;
+  display: flex;
+  padding: .5rem 2rem;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .decoration-list li .decoration-name {
+  color: white;
+  padding-left: 3rem;
+  position: relative;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .decoration-list li .decoration-name:before {
+  content: '';
+  height: 100%;
+  width: 2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .decoration-list li.decoration-1 .decoration-name:before {
+  background-image: url('img/decorations/gem_level_1.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .decoration-list li.decoration-2 .decoration-name:before {
+  background-image: url('img/decorations/gem_level_2.png');
+}
+.preview-section .preview-container .preview-informations .status-informations-wrapper .decoration-list li.decoration-3 .decoration-name:before {
+  background-image: url('img/decorations/gem_level_3.png');
+}
+.preview-section .preview-container .preview-informations .status-informations,
+.preview-section .preview-container .preview-informations .skills-informations {
+  background: url("img/top_large.png") no-repeat left top, url('img/bottom_large.png') no-repeat bottom left;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: 100%, 100% .5rem;
+  border: 1px solid #4c4948;
+  padding: 2rem 0;
+}
+.preview-section .preview-container .preview-informations .status-informations .title,
+.preview-section .preview-container .preview-informations .skills-informations .title {
+  text-align: center;
+  color: #cfee1d;
+  font-size: 2rem;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+}
+/*# sourceMappingURL=style.css.map */
