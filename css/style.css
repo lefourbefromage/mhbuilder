@@ -108,12 +108,12 @@ body {
   width: 60%;
   padding: 1rem;
 }
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs {
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item {
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item {
   width: 49%;
   background: #000000;
   color: white;
@@ -129,7 +129,7 @@ body {
   -o-transition: all ease 250ms;
   transition: all ease 250ms;
 }
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:before {
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:before {
   position: absolute;
   top: 0;
   left: .4rem;
@@ -141,7 +141,7 @@ body {
   -o-transition: all ease 250ms;
   transition: all ease 250ms;
 }
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:after {
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:after {
   position: absolute;
   bottom: 0;
   right: .3rem;
@@ -153,21 +153,21 @@ body {
   -o-transition: all ease 250ms;
   transition: all ease 250ms;
 }
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item.active,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:hover,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:focus,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:active {
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item.active,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:hover,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:focus,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:active {
   border-color: #cfee1d;
   color: #cfee1d;
 }
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item.active:before,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:hover:before,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:focus:before,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:active:before,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item.active:after,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:hover:after,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:focus:after,
-.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs .skills_tabs_item:active:after {
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item.active:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:hover:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:focus:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:active:before,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item.active:after,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:hover:after,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:focus:after,
+.preview-section .preview-container .preview-informations .skills-informations-wrapper .skills_tabs_buttons .skills_tabs_item:active:after {
   color: #cfee1d;
 }
 .preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations {
@@ -208,7 +208,7 @@ body {
 .preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-img {
   position: relative;
   z-index: 5;
-  width: 7rem;
+  width: 6rem;
 }
 .preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-img img {
   width: 100%;
@@ -220,7 +220,7 @@ body {
 .preview-section .preview-container .preview-informations .skills-informations-wrapper .skills-informations .skill-list .skill-item .skill-informations h2 {
   color: white;
   margin: 0;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   padding: 1rem 0;
   z-index: 5;
   position: relative;
