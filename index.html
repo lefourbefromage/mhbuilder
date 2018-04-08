@@ -5,15 +5,32 @@
 
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="category" content="concours">
     <meta name="keywords" content="Monster Hunter World Set Builder">
-    <meta name="author" lang="fr" content="LeFourbeFromage">
+    <meta name="author" lang="fr" content="Le Fourbe Fromage">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" name="viewport">
 
     <link rel="stylesheet" href="app/bootstrap/css/bootstrap.css">
-    <link href="css/img/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="css/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="css/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="css/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="css/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="css/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="css/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="css/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="css/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="css/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="css/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="css/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="css/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="css/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="css/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
@@ -119,129 +136,218 @@
         <div class="preview-informations">
             <div class="skills-informations-wrapper">
 
-                <div class="skills_tabs">
+                <div class="skills_tabs_buttons">
                     <button class="skills_tabs_item active">Active Skills</button>
                     <button class="skills_tabs_item">Set Skills</button>
                 </div>
 
-                <div class="skills-informations">
-                    <h2 class="title">Active Skills</h2>
-                    <ul class="skill-list">
-                        <li class="skill-item">
-                            <div class="skill-img">
-                                  <img src="css/img/skills/ice-attack-skill-mhw.png">
-                            </div>
-                            <div class="skill-informations">
-                                <h2>Earplugs</h2>
-                                <div class="skill-points">
-                                    <ul>
-                                        <li class="active"></li>
-                                        <li class="active"></li>
-                                        <li  class="active"></li>
-                                        <li  class="active"></li>
-                                        <li></li>
-                                    </ul>
-                                    <span>Level 4</span>
-                                </div>
-                            </div>
-                        </li>
+                <div class="skills_tabs_group">
+                    <div class="skills-informations skill-tab">
+                        <h2 class="title">Active Skills</h2>
+                        <div class="skill-list-wrapper">
+                            <ul class="skill-list">
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/ice-attack-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Earplugs</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li></li>
+                                            </ul>
+                                            <span>Level 4</span>
+                                        </div>
+                                    </div>
+                                </li>
 
-                         <li class="skill-item">
-                            <div class="skill-img">
-                                <img src="css/img/skills/attack-boost-skill-mhw.png">
-                            </div>
-                            <div class="skill-informations">
-                                <h2>Guard</h2>
-                                <div class="skill-points">
-                                    <ul>
-                                        <li class="active"></li>
-                                        <li class="active"></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                    <span>Level 2</span>
-                                </div>
-                            </div>
-                        </li>
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/attack-boost-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Guard</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                            <span>Level 2</span>
+                                        </div>
+                                    </div>
+                                </li>
 
-                        <li class="skill-item">
-                            <div class="skill-img">
-                                <img src="css/img/skills/attack-boost-skill-mhw.png">
-                            </div>
-                            <div class="skill-informations">
-                                <h2>Attack Boost</h2>
-                                <div class="skill-points">
-                                    <ul>
-                                        <li class="active"></li>
-                                        <li class="active"></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                    <span>Level 2</span>
-                                </div>
-                            </div>
-                        </li>
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/attack-boost-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Attack Boost</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                            <span>Level 2</span>
+                                        </div>
+                                    </div>
+                                </li>
 
-                         <li class="skill-item">
-                            <div class="skill-img">
-                                <img src="css/img/skills/attack-boost-skill-mhw.png">
-                            </div>
-                            <div class="skill-informations">
-                                <h2>Critical Draw</h2>
-                                <div class="skill-points">
-                                    <ul>
-                                        <li class="active"></li>
-                                        <li class="active"></li>
-                                        <li></li>
-                                    </ul>
-                                    <span>Level 2</span>
-                                </div>
-                            </div>
-                        </li>
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/attack-boost-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Critical Draw</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li></li>
+                                            </ul>
+                                            <span>Level 2</span>
+                                        </div>
+                                    </div>
+                                </li>
 
-                         <li class="skill-item">
-                            <div class="skill-img">
-                               <img src="css/img/skills/ice-attack-skill-mhw.png">
-                            </div>
-                            <div class="skill-informations">
-                                <h2>Artillery</h2>
-                                <div class="skill-points">
-                                    <ul>
-                                        <li class="active"></li>
-                                        <li class="active"></li>
-                                        <li  class="active"></li>
-                                    </ul>
-                                    <span class="complete">Level 3</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/ice-attack-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Artillery</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                            </ul>
+                                            <span class="complete">Level 3</span>
+                                        </div>
+                                    </div>
+                                </li>
 
-                <div class="skills-informations" style="display: none;">
-                    <h2 class="title">Set Skills</h2>
-                    <ul class="skill-list">
-                        <li class="skill-item">
-                            <div class="skill-img">
-                                  <img src="css/img/skills/ice-attack-skill-mhw.png">
-                            </div>
-                            <div class="skill-informations">
-                                <h2>Bazelgeuse Protection</h2>
-                                <div class="skill-points">
-                                    <ul>
-                                        <li class="active"></li>
-                                        <li class="active"></li>
-                                        <li  class="active"></li>
-                                    </ul>
-                                    <span class="complete">Level 3</span>
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/ice-attack-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Artillery</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                            </ul>
+                                            <span class="complete">Level 3</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/ice-attack-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Artillery</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                            </ul>
+                                            <span class="complete">Level 3</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/ice-attack-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Artillery</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                            </ul>
+                                            <span class="complete">Level 3</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/ice-attack-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Artillery</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                            </ul>
+                                            <span class="complete">Level 3</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="skill-item">
+                                    <div class="skill-img">
+                                        <img src="css/img/skills/ice-attack-skill-mhw.png">
+                                    </div>
+                                    <div class="skill-informations">
+                                        <h2>Artillery</h2>
+                                        <div class="skill-points">
+                                            <ul>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                                <li class="active"></li>
+                                            </ul>
+                                            <span class="complete">Level 3</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="set-skills-informations skill-tab">
+                        <h2 class="title">Set Skills</h2>
+                        <ul class="skill-list">
+                            <li class="skill-item">
+                                <div class="skill-img">
+                                    <img src="css/img/skills/ice-attack-skill-mhw.png">
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                                <div class="skill-informations">
+                                    <h2>Bazelgeuse Protection</h2>
+                                    <div class="skill-points">
+                                        <ul>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                        </ul>
+                                        <span class="complete">Level 3</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -283,12 +389,103 @@
                         <li class="decoration-2"><span class="decoration-name">Mighty Jewel 2</span> </li>
                         <li class="decoration-3"><span class="decoration-name">Blastcoat Jewel 3</span> </li>
                     </ul>
-
                 </div>
             </div>
+        </div>
+    </div>
+</section>
 
+<section class="search-section">
+    <div class="container">
+        <div class="search-menu">
+
+            <div class="search-item">
+                <button data-toggle="dropdown" class="search-dropdown" >
+                    Skills
+                </button>
+                <ul class="dropdown-menu">
+                    <form>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                        <li><a rel="nofollow" href="">Skill Item</a></li>
+                    </form>
+                </ul>
+            </div>
+
+            <div class="search-item">
+                <button data-toggle="dropdown" class="search-dropdown">
+                    Armor Slot
+                </button>
+                <ul class="dropdown-menu">
+                    <form>
+                        <li><a rel="nofollow" href="">Armor Slot Item</a></li>
+                        <li><a rel="nofollow" href="">Armor Slot Item</a></li>
+                        <li><a rel="nofollow" href="">Armor Slot Item</a></li>
+                        <li><a rel="nofollow" href="">Armor Slot Item</a></li>
+                    </form>
+                </ul>
+            </div>
+
+            <div class="search-item">
+                <button data-toggle="dropdown" class="search-dropdown">
+                    Decoration Slot
+                </button>
+                <ul class="dropdown-menu">
+                    <form>
+                        <li><a rel="nofollow" href="">Decoration Slot Item</a></li>
+                        <li><a rel="nofollow" href="">Decoration Slot Item</a></li>
+                        <li><a rel="nofollow" href="">Decoration Slot Item</a></li>
+                    </form>
+                </ul>
+            </div>
+
+            <div class="search-item">
+                <button data-toggle="dropdown" class="search-dropdown">
+                    Rarity
+                </button>
+                <ul class="dropdown-menu">
+                    <form>
+                        <li><a rel="nofollow" href="">Rarity Item</a></li>
+                        <li><a rel="nofollow" href="">Rarity Item</a></li>
+                        <li><a rel="nofollow" href="">Rarity Item</a></li>
+                    </form>
+                </ul>
+            </div>
+
+            <div class="search-item">
+                <button data-toggle="dropdown" class="search-dropdown">
+                    Status
+                </button>
+                <ul class="dropdown-menu">
+                    <form>
+                        <li><a rel="nofollow" href="">Status Item</a></li>
+                        <li><a rel="nofollow" href="">Status Item</a></li>
+                        <li><a rel="nofollow" href="">Status Item</a></li>
+                    </form>
+                </ul>
+            </div>
         </div>
 
+        <div class="active-filters-wrapper">
+            <p class="active-filters">Active filters : <span class="active-filter-item">Helm</span><span class="active-filter-item">Defense vs. Fire</span></p>
+            <div class="display-options">
+                <span class="option option-active">Show Stats</span>
+                <span class="option option-inactive">Preview</span>
+            </div>
+        </div>
+
+        <div class="search-list">
+
+        </div>
     </div>
 </section>
 
@@ -296,6 +493,58 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="app/bootstrap/js/bootstrap.min.js"></script>
+<script src="app/bootstrap/js/bootstrap.bundle.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('.skills_tabs_group > .skill-tab').hide();
+        $('.skills_tabs_group > .skill-tab:first-of-type').show();
+
+        $('.skills_tabs_item').click(function (e) {
+             e.preventDefault();
+            var $this = $(this),
+                tabposition = $this.index()+1,
+                tabs = '.skills_tabs_group > .skill-tab',
+                others = $this.closest('.skills_tabs_buttons').children('button'),
+                target = '.skill-tab'+':nth-child('+tabposition+')';
+
+            $(others).removeClass('active');
+            $this.addClass('active');
+            $(tabs).hide();
+            $(target).fadeIn();
+        });
+
+
+        var statusheight = $('.status-informations-wrapper').height(),
+            skillsheight = $('.skills-informations-wrapper').height(),
+            buttonsheight = $('.skills_tabs_buttons').height(),
+            titleheight = $('.skills-informations .title').height(),
+            skilllistheight = $('.skill-list').height();
+            titlewrapper = titleheight *3.5;
+
+        if ( skillsheight > statusheight ){
+            $('.skill-list-wrapper').height(statusheight - buttonsheight - titlewrapper );
+            $('.skills-informations .title').append('<a href="#" class="expand-list">Expand list</a>');
+            $('.skills-informations .title').append('<a href="#" style="display:none;" class="reduce-list">Reduce list</a>');
+        }
+
+        $('.expand-list').click(function (e) {
+            e.preventDefault();
+            $('.skill-list-wrapper').height(skilllistheight);
+            $(this).hide();
+            $('.reduce-list').show();
+        });
+
+        $('.reduce-list').click(function (e) {
+            e.preventDefault();
+            $(this).hide();
+            $('.expand-list').show();
+            $('.skill-list-wrapper').height( statusheight - buttonsheight - titlewrapper );
+        });
+    });
+
+
+</script>
 </body>
 </html>
