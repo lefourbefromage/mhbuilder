@@ -11,12 +11,14 @@
 @red: #e24747;
 @black: #000000;
 
+@purple: #7921ee;
+
 html {
   font-size: 62.5%;
 }
 
 body {
-
+  
   background-color: @black;
   font-family: 'Noto Sans', sans-serif;
 }
@@ -27,14 +29,14 @@ body {
   background-size: 100%;
   height: 8rem;
   box-shadow: 0px 0px 10px 0px rgba(207, 238, 29, 0.2);
-
+  
   .navbar-logo {
-    width: 26rem;
-    margin-top: 8rem;
-    height: 0;
-    padding-bottom: 11%;
-    background: url(img/mh-world-logo.png) no-repeat  center;
-    background-size: auto 100%;
+	width: 26rem;
+	margin-top: 8rem;
+	height: 0;
+	padding-bottom: 11%;
+	background: url(img/mh-world-logo.png) no-repeat center;
+	background-size: auto 100%;
   }
 }
 
@@ -43,682 +45,934 @@ body {
   background-size: cover;
   padding-top: 10rem;
   padding-bottom: 5rem;
-
+  
   .preview-container {
-    padding: 0;
-    display: flex;
-
-    .preview-build {
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-      padding-top: 10rem;
-
-      .preview-row {
-        display: flex;
-
-        .item-wrapper {
-          width: 33%;
-          padding: .5rem;
-
-          .item {
-            height: 0;
-            padding-bottom: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 1rem;
-            border: 1px solid @dark-gray;
-            position: relative;
-
-            .img-wrapper {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              padding: .5rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              img {
-                width: auto;
-                height: auto;
-                max-width: 100%;
-                max-height: 100%;
-              }
-
-              .item-decoration-slots {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 50%;
-
-                ul {
-                  padding: 0;
-                  list-style: none;
-                  display: flex;
-                  justify-content: flex-end;
-                  margin: 0;
-                  li {
-                    width: 33%;
-                    text-align: center;
-                    padding: 3px;
-                  }
-                }
-              }
-            }
-          }
-
-          &.item-small {
-            width: 20%;
-          }
-        }
-
-        &#second-row,
-        &#first-row {
-          justify-content: center;
-          align-items: flex-end;
-        }
-
-        &#third-row {
-          justify-content: flex-end;
-        }
-      }
-    }
-
-    .preview-informations {
-      width: 60%;
-      display: flex;
-      padding-left: 1rem;
-      align-items: flex-start;
-
-      .skills-informations-wrapper {
-        width: 60%;
-        padding: 1rem;
-
-        .skills_tabs_buttons {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 1rem;
-
-          .skills_tabs_item {
-            width: 49%;
-            background: @black;
-            color: white;
-            font-size: 1.6rem;
-            padding: 2rem;
-            border: 1px solid @dark-gray;
-            letter-spacing: 1px;
-            outline: none;
-            cursor: pointer;
-            position: relative;
-            .transition(all ease 250ms);
-
-            &:before {
-              position: absolute;
-              top: 0;
-              left: .4rem;
-              content: '\e901';
-              font-family: 'icomoon' !important;
-              color: @dark-gray;
-              .transition(all ease 250ms);
-            }
-
-            &:after {
-              position: absolute;
-              bottom: 0;
-              right: .3rem;
-              content: '\e900';
-              font-family: 'icomoon' !important;
-              color: @dark-gray;
-              .transition(all ease 250ms);
-            }
-
-            &.active, &:hover, &:focus, &:active {
-              border-color: @green;
-              color: @green;
-
-              &:before, &:after {
-                color: @green;
-              }
-            }
-          }
-        }
-
-        .set-skills-informations,
-        .skills-informations {
-          margin-bottom: 3rem;
-          padding-bottom: 0;
-
-          .skill-list-wrapper {
-            overflow: auto;
-            .transition(all ease 1s);
-          }
-          .skill-list {
-            padding: 0;
-            list-style: none;
-            margin-bottom: 0;
-
-            .skill-item {
-              display: flex;
-              padding: 0 2rem 0 3rem;
-              align-items: center;
-              position: relative;
-
-              background: url('img/ornement_list_item.png') no-repeat;
-              background-position: calc(~"100% - 5px") 5px;
-
-              &:before, &:after {
-                content: '';
-                height: 50%;
-                width: 100%;
-                position: absolute;
-                left: 0;
-              }
-
-              &:before {
-                top: 0;
-                background: rgba(45, 45, 45, 0.5);
-                z-index: 1;
-              }
-
-              &:after {
-                bottom: 0;
-                background: rgba(45, 45, 45, 0.3);
-
-                z-index: 1;
-              }
-
-              .skill-img {
-                position: relative;
-                z-index: 5;
-                width: 6rem;
-                img {
-                  width: 100%;
-                }
-              }
-
-              .skill-informations {
-                width: 100%;
-                padding-left: 2rem;
-
-                h2 {
-                  color: white;
-                  margin: 0;
-                  font-size: 1.6rem;
-                  padding: 1rem 0;
-                  z-index: 5;
-                  position: relative;
-                }
-
-                .skill-points {
-                  display: flex;
-                  justify-content: flex-end;
-                  align-items: center;
-
-                  ul {
-                    list-style: none;
-                    margin: 1rem 0;
-                    padding: 0 2.5rem;
-                    display: flex;
-                    position: relative;
-                    z-index: 3;
-                    background: url("img/arrow_left.png") no-repeat left center, url('img/arrow-right.png') no-repeat right center;
-                    background-size: auto 100%;
-
-                    &:before {
-                      content: '';
-                      height: 3px;
-                      width: calc(~"100% - 3rem");
-                      background-color: #5f5e5e;
-                      position: absolute;
-                      -webkit-transform: translate(-50%, -50%);
-                      -moz-transform: translate(-50%, -50%);
-                      -ms-transform: translate(-50%, -50%);
-                      -o-transform: translate(-50%, -50%);
-                      transform: translate(-50%, -50%);
-                      top: 50%;
-                      left: 50%;
-                      z-index: 4;
-                    }
-
-                    li {
-                      position: relative;
-                      z-index: 5;
-                      background: #383838;
-                      background: -moz-linear-gradient(top, #383838 0%, #5f5e5e 70%);
-                      background: -webkit-linear-gradient(top, #383838 0%, #5f5e5e 70%);
-                      background: linear-gradient(to bottom, #383838 0%, #5f5e5e 70%);
-                      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#383838', endColorstr='#5f5e5e', GradientType=0);
-                      padding: .7rem;
-                      border-radius: 3px;
-                      border: 2px solid #5f5e5e;
-                      margin: 0 2px;
-
-                      &.active {
-                        border: 2px solid #cfee1d;
-                        background: #cfee1d;
-                        background: -moz-linear-gradient(top, #cfee1d 0%, #b7d21c 70%);
-                        background: -webkit-linear-gradient(top, #cfee1d 0%, #b7d21c 70%);
-                        background: linear-gradient(to bottom, #cfee1d 0%, #b7d21c 70%);
-                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfee1d', endColorstr='#b7d21c', GradientType=0);
-                      }
-                    }
-                  }
-
-                  span {
-                    display: block;
-                    width: 100%;
-                    text-align: right;
-                    color: white;
-                    font-size: 1.2rem;
-                    position: relative;
-                    z-index: 5;
-
-                    &.complete {
-                      color: @green;
-                    }
-                  }
-                }
-              }
-            }
-
-          }
-        }
-      }
-
-      .status-informations-wrapper {
-        width: 40%;
-        padding: 1rem;
-
-        .status-informations {
-          &:first-child {
-            margin-bottom: 2rem;
-          }
-
-          .title{
-            margin-bottom: 1.5rem;
-          }
-        }
-
-
-
-        h3 {
-          padding: 1rem 4rem;
-          color: white;
-          letter-spacing: 1px;
-          margin-bottom: 0;
-        }
-
-        .status-list {
-          list-style: none;
-          padding: 0;
-          margin-bottom: 0;
-
-          li {
-            font-size: 1.5rem;
-            display: flex;
-            padding: .5rem 2rem;
-
-            .status-name {
-              color: @gray;
-              width: 100%;
-              padding-left: 3rem;
-              position: relative;
-
-              &:before {
-                content: '';
-                height: 100%;
-                width: 2rem;
-                background-size: 100%;
-                background-repeat: no-repeat;
-                background-position: center;
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-              }
-            }
-
-            .status-value {
-              color: white;
-              position:relative;
-
-              &.negative-value {
-                color: @red;
-              }
-            }
-
-            &.health{
-              .status-name:before{
-                background-image:url('img/elements/mhw-health.png');
-              }
-            }
-
-            &.stamina{
-              .status-name:before{
-                background-image:url('img/elements/mhw-stamina.png');
-              }
-            }
-
-            &.attack-raw{
-              .status-name:before{
-                background-image:url('img/elements/mhw-attack.png');
-              }
-            }
-
-            &.attack-affinity{
-              .status-name:before{
-                background-image:url('img/elements/mhw-affinity.png');
-              }
-            }
-
-            &.attack-element{
-              .status-name:before{
-                background-image:url('img/elements/mhw-element-damage.png');
-              }
-
-              .status-value {
-                padding-left: 2.5rem;
-
-                &.disabled{
-                  &:before{
-                    content:'';
-                    opacity: 0.5;
-                  }
-                }
-
-                &:before {
-                  content: '';
-                  height: 100%;
-                  width: 2rem;
-                  background-size: 100%;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                  display: block;
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                }
-
-                &.element-water {
-                  &:before{
-                    background-image: url('img/elements/mhw-water-elemental-damage_s.png');
-                  }
-                }
-
-                &.element-fire {
-                  &:before {
-                    background-image: url('img/elements/mhw-fire-damage_s.png');
-                  }
-                }
-
-                &.element-thunder {
-                  &:before {
-                    background-image: url('img/elements/mhw-thunder-damage_s.png');
-                  }
-                }
-
-                &.element-ice {
-                  &:before {
-                    background-image: url('img/elements/mhw-ice-damage_s.png');
-                  }
-                }
-
-                &.element-dragon {
-                  &:before {
-                    background-image: url('img/elements/mhw-dragon-damage_s.png');
-                  }
-                }
-
-                &.negative-value {
-                  color: @red;
-                }
-              }
-            }
-
-            &.defense-raw {
-              .status-name:before {
-                background-image: url('img/elements/mhw-defense_s.png');
-              }
-            }
-
-            &.defense-fire {
-              .status-name:before {
-                background-image: url('img/elements/mhw-fire-damage_s.png');
-              }
-            }
-
-            &.defense-water {
-              .status-name:before {
-                background-image: url('img/elements/mhw-water-elemental-damage_s.png');
-              }
-            }
-
-            &.defense-thunder {
-              .status-name:before {
-                background-image: url('img/elements/mhw-thunder-damage_s.png');
-              }
-            }
-
-            &.defense-ice {
-              .status-name:before {
-                background-image: url('img/elements/mhw-ice-damage_s.png');
-              }
-            }
-
-            &.defense-dragon {
-              .status-name:before {
-                background-image: url('img/elements/mhw-dragon-damage_s.png');
-              }
-            }
-          }
-        }
-
-        .decoration-list {
-          list-style: none;
-          padding: 0;
-          margin-bottom: 0;
-
-          li {
-            font-size: 1.5rem;
-            display: flex;
-            padding: .5rem 2rem;
-
-
-            .decoration-name{
-              color: white;
-              padding-left: 3rem;
-              position: relative;
-
-
-              &:before {
-                content: '';
-                height: 100%;
-                width: 2rem;
-                background-size: 100%;
-                background-repeat: no-repeat;
-                background-position: center;
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-              }
-            }
-
-            &.decoration-1 {
-              .decoration-name:before {
-                background-image: url('img/decorations/gem_level_1.png');
-              }
-            }
-
-            &.decoration-2 {
-              .decoration-name:before {
-                background-image: url('img/decorations/gem_level_2.png');
-              }
-            }
-
-            &.decoration-3 {
-              .decoration-name:before {
-                background-image: url('img/decorations/gem_level_3.png');
-              }
-            }
-          }
-        }
-      }
-
-      .status-informations,
-      .skills-informations,
-      .set-skills-informations{
-        background: url("img/top_large.png") no-repeat left top, url('img/bottom_large.png') no-repeat bottom left;
-        background-color: rgba(0, 0, 0, 0.6);
-        background-size: 100%, 100% .5rem;
-        border: 1px solid @dark-gray;
-        padding: 2rem 0;
-
-        .title {
-          text-align: center;
-          color: @green;
-          font-size: 2rem;
-          margin-top: 1rem;
-          letter-spacing: 1px;
-          margin-bottom: 2.5rem;
-
-          a{
-            display: block;
-            color:white;
-            font-size: 1.2rem;
-          }
-        }
-      }
-    }
+	padding: 0;
+	display: flex;
+	
+	.preview-build {
+	  width: 40%;
+	  display: flex;
+	  flex-direction: column;
+	  padding-top: 10rem;
+	  
+	  .preview-row {
+		display: flex;
+		
+		.item-wrapper {
+		  width: 33%;
+		  padding: .5rem;
+		  
+		  .item {
+			height: 0;
+			padding-bottom: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+			border-radius: 1rem;
+			border: 1px solid @dark-gray;
+			position: relative;
+			
+			.img-wrapper {
+			  position: absolute;
+			  width: 100%;
+			  height: 100%;
+			  top: 0;
+			  left: 0;
+			  padding: .5rem;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  
+			  img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			  }
+			  
+			  .item-decoration-slots {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 50%;
+				
+				ul {
+				  padding: 0;
+				  list-style: none;
+				  display: flex;
+				  justify-content: flex-end;
+				  margin: 0;
+				  li {
+					width: 33%;
+					text-align: center;
+					padding: 3px;
+				  }
+				}
+			  }
+			}
+		  }
+		  
+		  &.item-small {
+			width: 20%;
+		  }
+		}
+		
+		&#second-row,
+		&#first-row {
+		  justify-content: center;
+		  align-items: flex-end;
+		}
+		
+		&#third-row {
+		  justify-content: flex-end;
+		}
+	  }
+	}
+	
+	.preview-informations {
+	  width: 60%;
+	  display: flex;
+	  padding-left: 1rem;
+	  align-items: flex-start;
+	  
+	  .skills-informations-wrapper {
+		width: 60%;
+		padding: 1rem;
+		
+		.skills_tabs_buttons {
+		  display: flex;
+		  justify-content: space-between;
+		  margin-bottom: 1rem;
+		  
+		  .skills_tabs_item {
+			width: 49%;
+			background: @black;
+			color: white;
+			font-size: 1.6rem;
+			padding: 2rem;
+			border: 1px solid @dark-gray;
+			letter-spacing: 1px;
+			outline: none;
+			cursor: pointer;
+			position: relative;
+			.transition(all ease 250ms);
+			
+			&:before {
+			  position: absolute;
+			  top: 0;
+			  left: .4rem;
+			  content: '\e901';
+			  font-family: 'icomoon' !important;
+			  color: @dark-gray;
+			  .transition(all ease 250ms);
+			}
+			
+			&:after {
+			  position: absolute;
+			  bottom: 0;
+			  right: .3rem;
+			  content: '\e900';
+			  font-family: 'icomoon' !important;
+			  color: @dark-gray;
+			  .transition(all ease 250ms);
+			}
+			
+			&.active, &:hover, &:focus, &:active {
+			  border-color: @green;
+			  color: @green;
+			  
+			  &:before, &:after {
+				color: @green;
+			  }
+			}
+		  }
+		}
+		
+		.set-skills-informations,
+		.skills-informations {
+		  margin-bottom: 3rem;
+		  padding-bottom: 0;
+		  
+		  .skill-list-wrapper {
+			overflow: auto;
+			.transition(all ease 1s);
+		  }
+		  .skill-list {
+			padding: 0;
+			list-style: none;
+			margin-bottom: 0;
+			
+			.skill-item {
+			  display: flex;
+			  padding: 0 2rem 0 3rem;
+			  align-items: center;
+			  position: relative;
+			  
+			  background: url('img/ornement_list_item.png') no-repeat;
+			  background-position: calc(~"100% - 5px") 5px;
+			  
+			  &:before, &:after {
+				content: '';
+				height: 50%;
+				width: 100%;
+				position: absolute;
+				left: 0;
+			  }
+			  
+			  &:before {
+				top: 0;
+				background: rgba(45, 45, 45, 0.5);
+				z-index: 1;
+			  }
+			  
+			  &:after {
+				bottom: 0;
+				background: rgba(45, 45, 45, 0.3);
+				
+				z-index: 1;
+			  }
+			  
+			  .skill-img {
+				position: relative;
+				z-index: 5;
+				width: 6rem;
+				img {
+				  width: 100%;
+				}
+			  }
+			  
+			  .skill-informations {
+				width: 100%;
+				padding-left: 2rem;
+				
+				h2 {
+				  color: white;
+				  margin: 0;
+				  font-size: 1.6rem;
+				  padding: 1rem 0;
+				  z-index: 5;
+				  position: relative;
+				}
+				
+				.skill-points {
+				  display: flex;
+				  justify-content: flex-end;
+				  align-items: center;
+				  
+				  ul {
+					list-style: none;
+					margin: 1rem 0;
+					padding: 0 2.5rem;
+					display: flex;
+					position: relative;
+					z-index: 3;
+					background: url("img/arrow_left.png") no-repeat left center, url('img/arrow-right.png') no-repeat right center;
+					background-size: auto 100%;
+					
+					&:before {
+					  content: '';
+					  height: 3px;
+					  width: calc(~"100% - 3rem");
+					  background-color: #5f5e5e;
+					  position: absolute;
+					  -webkit-transform: translate(-50%, -50%);
+					  -moz-transform: translate(-50%, -50%);
+					  -ms-transform: translate(-50%, -50%);
+					  -o-transform: translate(-50%, -50%);
+					  transform: translate(-50%, -50%);
+					  top: 50%;
+					  left: 50%;
+					  z-index: 4;
+					}
+					
+					li {
+					  position: relative;
+					  z-index: 5;
+					  background: #383838;
+					  background: -moz-linear-gradient(top, #383838 0%, #5f5e5e 70%);
+					  background: -webkit-linear-gradient(top, #383838 0%, #5f5e5e 70%);
+					  background: linear-gradient(to bottom, #383838 0%, #5f5e5e 70%);
+					  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#383838', endColorstr='#5f5e5e', GradientType=0);
+					  padding: .7rem;
+					  border-radius: 3px;
+					  border: 2px solid #5f5e5e;
+					  margin: 0 2px;
+					  
+					  &.active {
+						border: 2px solid #cfee1d;
+						background: #cfee1d;
+						background: -moz-linear-gradient(top, #cfee1d 0%, #b7d21c 70%);
+						background: -webkit-linear-gradient(top, #cfee1d 0%, #b7d21c 70%);
+						background: linear-gradient(to bottom, #cfee1d 0%, #b7d21c 70%);
+						filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfee1d', endColorstr='#b7d21c', GradientType=0);
+					  }
+					}
+				  }
+				  
+				  span {
+					display: block;
+					width: 100%;
+					text-align: right;
+					color: white;
+					font-size: 1.2rem;
+					position: relative;
+					z-index: 5;
+					
+					&.complete {
+					  color: @green;
+					}
+				  }
+				}
+			  }
+			}
+			
+		  }
+		}
+	  }
+	  
+	  .status-informations-wrapper {
+		width: 40%;
+		padding: 1rem;
+		
+		.status-informations {
+		  &:first-child {
+			margin-bottom: 2rem;
+		  }
+		  
+		  .title {
+			margin-bottom: 1.5rem;
+		  }
+		}
+		
+		h3 {
+		  padding: 1rem 4rem;
+		  color: white;
+		  letter-spacing: 1px;
+		  margin-bottom: 0;
+		}
+		
+		.status-list {
+		  list-style: none;
+		  padding: 0;
+		  margin-bottom: 0;
+		  
+		  li {
+			font-size: 1.5rem;
+			display: flex;
+			padding: .5rem 2rem;
+			
+			.status-name {
+			  color: @gray;
+			  width: 100%;
+			  padding-left: 3rem;
+			  position: relative;
+			  
+			  &:before {
+				content: '';
+				height: 100%;
+				width: 2rem;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+			  }
+			}
+			
+			.status-value {
+			  color: white;
+			  position: relative;
+			  
+			  &.negative-value {
+				color: @red;
+			  }
+			}
+			
+			&.health {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-health.png');
+			  }
+			}
+			
+			&.stamina {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-stamina.png');
+			  }
+			}
+			
+			&.attack-raw {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-attack.png');
+			  }
+			}
+			
+			&.attack-affinity {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-affinity.png');
+			  }
+			}
+			
+			&.attack-element {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-element-damage.png');
+			  }
+			  
+			  .status-value {
+				padding-left: 2.5rem;
+				
+				&.disabled {
+				  &:before {
+					content: '';
+					opacity: 0.5;
+				  }
+				}
+				
+				&:before {
+				  content: '';
+				  height: 100%;
+				  width: 2rem;
+				  background-size: 100%;
+				  background-repeat: no-repeat;
+				  background-position: center;
+				  display: block;
+				  position: absolute;
+				  left: 0;
+				  top: 0;
+				}
+				
+				&.element-water {
+				  &:before {
+					background-image: url('img/elements/mhw-water-elemental-damage_s.png');
+				  }
+				}
+				
+				&.element-fire {
+				  &:before {
+					background-image: url('img/elements/mhw-fire-damage_s.png');
+				  }
+				}
+				
+				&.element-thunder {
+				  &:before {
+					background-image: url('img/elements/mhw-thunder-damage_s.png');
+				  }
+				}
+				
+				&.element-ice {
+				  &:before {
+					background-image: url('img/elements/mhw-ice-damage_s.png');
+				  }
+				}
+				
+				&.element-dragon {
+				  &:before {
+					background-image: url('img/elements/mhw-dragon-damage_s.png');
+				  }
+				}
+				
+				&.negative-value {
+				  color: @red;
+				}
+			  }
+			}
+			
+			&.defense-raw {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-defense_s.png');
+			  }
+			}
+			
+			&.defense-fire {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-fire-damage_s.png');
+			  }
+			}
+			
+			&.defense-water {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-water-elemental-damage_s.png');
+			  }
+			}
+			
+			&.defense-thunder {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-thunder-damage_s.png');
+			  }
+			}
+			
+			&.defense-ice {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-ice-damage_s.png');
+			  }
+			}
+			
+			&.defense-dragon {
+			  .status-name:before {
+				background-image: url('img/elements/mhw-dragon-damage_s.png');
+			  }
+			}
+		  }
+		}
+		
+		.decoration-list {
+		  list-style: none;
+		  padding: 0;
+		  margin-bottom: 0;
+		  
+		  li {
+			font-size: 1.5rem;
+			display: flex;
+			padding: .5rem 2rem;
+			
+			.decoration-name {
+			  color: white;
+			  padding-left: 3rem;
+			  position: relative;
+			  
+			  &:before {
+				content: '';
+				height: 100%;
+				width: 2rem;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+			  }
+			}
+			
+			&.decoration-1 {
+			  .decoration-name:before {
+				background-image: url('img/decorations/gem_level_1.png');
+			  }
+			}
+			
+			&.decoration-2 {
+			  .decoration-name:before {
+				background-image: url('img/decorations/gem_level_2.png');
+			  }
+			}
+			
+			&.decoration-3 {
+			  .decoration-name:before {
+				background-image: url('img/decorations/gem_level_3.png');
+			  }
+			}
+		  }
+		}
+	  }
+	  
+	  .status-informations,
+	  .skills-informations,
+	  .set-skills-informations {
+		background: url("img/top_large.png") no-repeat left top, url('img/bottom_large.png') no-repeat bottom left;
+		background-color: rgba(0, 0, 0, 0.6);
+		background-size: 100%, 100% .5rem;
+		border: 1px solid @dark-gray;
+		padding: 2rem 0;
+		
+		.title {
+		  text-align: center;
+		  color: @green;
+		  font-size: 2rem;
+		  margin-top: 1rem;
+		  letter-spacing: 1px;
+		  margin-bottom: 2.5rem;
+		  
+		  a {
+			display: block;
+			color: white;
+			font-size: 1.2rem;
+		  }
+		}
+	  }
+	}
   }
 }
 
 .search-section {
   .search-menu {
-    background: url("img/extralarge_top.png") no-repeat left top, url('img/extralarge_bottom.png') no-repeat bottom left;
-    background-size: 100%;
-    padding: 2rem;
-    .translateY(-50%);
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    z-index: 25;
-
-    .search-item {
-      display: block;
-      width: 100%;
-      position: relative;
-
-      &:last-child {
-        .search-dropdown {
-          border-right: transparent;
-        }
-      }
-
-      .search-dropdown {
-        width: 100%;
-        background: transparent;
-        color: white;
-        font-size: 1.6rem;
-        text-align: left;
-        border: none;
-        padding: 1rem 3rem;
-        letter-spacing: 1px;
-        position: relative;
-        outline: none;
-        border-right: 1px solid @dark-gray;
-
-        &:after {
-          position: absolute;
-          content: '\e901';
-          font-family: 'icomoon' !important;
-          color: white;
-          border: none;
-          .transform(translate(-100%, -50%), rotate(-130deg));
-          transform-origin: center;
-          right: 1.5rem;
-          top: 55%;
-          height: 0;
-          margin: 0;
-          font-size: 1.2rem;
-        }
-      }
-    }
+	background: url("img/extralarge_top.png") no-repeat left top, url('img/extralarge_bottom.png') no-repeat bottom left;
+	background-size: 100%;
+	padding: 2rem;
+	.translateY(-50%);
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	z-index: 25;
+	
+	.search-item {
+	  display: block;
+	  width: 100%;
+	  position: relative;
+	  
+	  &:last-child {
+		.search-dropdown {
+		  border-right: transparent;
+		}
+	  }
+	  
+	  .search-dropdown {
+		width: 100%;
+		background: transparent;
+		color: white;
+		font-size: 1.6rem;
+		text-align: left;
+		border: none;
+		padding: 1rem 3rem;
+		letter-spacing: 1px;
+		position: relative;
+		outline: none;
+		border-right: 1px solid @dark-gray;
+		
+		&:after {
+		  position: absolute;
+		  content: '\e901';
+		  font-family: 'icomoon' !important;
+		  color: white;
+		  border: none;
+		  .transform(translate(-100%, -50%), rotate(-130deg));
+		  transform-origin: center;
+		  right: 1.5rem;
+		  top: 55%;
+		  height: 0;
+		  margin: 0;
+		  font-size: 1.2rem;
+		}
+	  }
+	}
   }
-
-  .active-filters-wrapper{
-    z-index: 20;
-    padding: 1rem 0;
-    position:relative;
-    margin-top: -3rem;
-    margin-bottom: 1rem;
-    display: flex;
-
-    .active-filters{
-      font-size: 1.5rem;
-      color:white;
-      width: 100%;
-      margin-bottom: 0;
-
-      .active-filter-item {
-        border-radius: .5rem;
-        border: 1px solid @green;
-        color: @green;
-        padding: 1rem 2rem;
-        margin-left: .5rem;
-        display: inline-block;
-
-        &:after {
-          content: '✘';
-          margin-left: 1rem;
-        }
-      }
-    }
-
-    .display-options{
-      display: flex;
-
-      .option {
-        border-radius: .5rem;
-        font-size: 1.5rem;
-        padding: 1rem 2rem;
-        margin-right: .5rem;
-        white-space: nowrap;
-
-
-
-        &.option-active{
-          border: 1px solid @green;
-          color: @green;
-
-          &:before {
-            content: '✔';
-            margin-right: 1rem;
-          }
-        }
-
-        &.option-inactive{
-          border: 1px solid @dark-gray;
-          color: @dark-gray;
-
-          &:before {
-            content: '✘';
-            margin-right: 1rem;
-          }
-        }
-      }
-    }
+  
+  .active-filters-wrapper {
+	z-index: 20;
+	padding: 1rem 0;
+	position: relative;
+	margin-top: -3rem;
+	margin-bottom: 1rem;
+	display: flex;
+	
+	.active-filters {
+	  font-size: 1.5rem;
+	  color: white;
+	  width: 100%;
+	  margin-bottom: 0;
+	  
+	  .active-filter-item {
+		border-radius: .5rem;
+		border: 1px solid @green;
+		color: @green;
+		padding: 1rem 2rem;
+		margin-left: .5rem;
+		display: inline-block;
+		
+		&:after {
+		  content: '✘';
+		  margin-left: 1rem;
+		}
+	  }
+	}
+	
+	.display-options {
+	  display: flex;
+	  
+	  .option {
+		border-radius: .5rem;
+		font-size: 1.5rem;
+		padding: 1rem 2rem;
+		margin-right: .5rem;
+		white-space: nowrap;
+		
+		&.option-active {
+		  border: 1px solid @green;
+		  color: @green;
+		  
+		  &:before {
+			content: '✔';
+			margin-right: 1rem;
+		  }
+		}
+		
+		&.option-inactive {
+		  border: 1px solid @dark-gray;
+		  color: @dark-gray;
+		  
+		  &:before {
+			content: '✘';
+			margin-right: 1rem;
+		  }
+		}
+	  }
+	}
   }
-
-  .search-list{
-    padding: 2rem;
-    height:50rem;
-    background: url('img/pattern.jpg')no-repeat center;
-    background-size: cover;
-    margin-bottom: 5rem;
+  
+  .search-list {
+	padding: 2rem;
+	background: url('img/pattern.jpg');
+	background-size: cover;
+	margin-bottom: 5rem;
+	
+	.search-item-wrapper{
+	  display: flex;
+	  flex-wrap: wrap;
+	}
   }
+}
 
+.item-detail-wrapper{
+  width: 25%;
+  padding: 1rem;
+}
+.item-detail {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid @dark-gray;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  
+  .item-title {
+	text-align: center;
+	
+	h3 {
+	  color: white;
+	  margin: 0;
+	  padding-top: 1rem;
+	}
+	
+	.item-rarity {
+	  margin-top: 0rem;
+	  margin-bottom: 0;
+	 padding-bottom: 1rem;
+	  border-bottom: 1px solid @gray;
+	  &.rarity-5 {
+		color: @purple;
+	  }
+	}
+  }
+  
+  .item-preview {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding: 0 1rem;
+	.item-preview-img {
+	  width: 50%;
+	  padding: 1rem;
+	  img {
+		width: 100%;
+	  }
+	}
+  }
+  
+  .item-informations {
+	.item-informations-title {
+	  background: rgba(255, 255, 255, 0.1);
+	  padding: .5rem .5rem .5rem 3rem;
+	  position: relative;
+	  color: white;
+	  &:before {
+		content: '';
+		background: url('') no-repeat center;
+		background-size: 1rem;
+	  }
+	}
+	
+	.item-skills {
+	  padding: 1rem 2rem;
+	  list-style: none;
+	  margin: 0;
+	  li {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding-bottom: .5rem;
+		img {
+		  max-width: 2rem;
+		  display: block;
+		}
+		p {
+		  color: @green;
+		  margin-left: 1rem;
+		  margin-bottom: 0;
+		}
+	  }
+	}
+	
+	.status-stats {
+	  list-style: none;
+	  padding: 1rem 0;
+	  margin-bottom: 0;
+	  
+	  li {
+		font-size: 1.5rem;
+		display: flex;
+		padding: .5rem 2rem 0 2rem;
+		
+		.status-name {
+		  color: @gray;
+		  width: 100%;
+		  padding-left: 3rem;
+		  position: relative;
+		  
+		  &:before {
+			content: '';
+			height: 100%;
+			width: 2rem;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+		  }
+		}
+		
+		.status-value {
+		  color: white;
+		  position: relative;
+		  
+		  &.negative-value {
+			color: @red;
+		  }
+		}
+		
+		&.decoration-slots {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-decoration_s.png');
+		  }
+		  
+		  .status-value{
+			display: flex;
+		  }
+		  .decorations-lvl{
+			padding: 0 .2rem;
+			width: 50%;
+			overflow: hidden;
+			height: 100%;
+			
+			img{
+			  margin-top: -5px;
+			  width: 100%;
+			}
+		  }
+		}
+		
+		&.attack-raw {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-attack.png');
+		  }
+		}
+		
+		&.attack-affinity {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-affinity.png');
+		  }
+		}
+		
+		&.attack-element {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-element-damage.png');
+		  }
+		  
+		  .status-value {
+			padding-left: 2.5rem;
+			
+			&.disabled {
+			  &:before {
+				content: '';
+				opacity: 0.5;
+			  }
+			}
+			
+			&:before {
+			  content: '';
+			  height: 100%;
+			  width: 2rem;
+			  background-size: 100%;
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  display: block;
+			  position: absolute;
+			  left: 0;
+			  top: 0;
+			}
+			
+			&.element-water {
+			  &:before {
+				background-image: url('img/elements/mhw-water-elemental-damage_s.png');
+			  }
+			}
+			
+			&.element-fire {
+			  &:before {
+				background-image: url('img/elements/mhw-fire-damage_s.png');
+			  }
+			}
+			
+			&.element-thunder {
+			  &:before {
+				background-image: url('img/elements/mhw-thunder-damage_s.png');
+			  }
+			}
+			
+			&.element-ice {
+			  &:before {
+				background-image: url('img/elements/mhw-ice-damage_s.png');
+			  }
+			}
+			
+			&.element-dragon {
+			  &:before {
+				background-image: url('img/elements/mhw-dragon-damage_s.png');
+			  }
+			}
+			
+			&.negative-value {
+			  color: @red;
+			}
+		  }
+		}
+		
+		&.defense-raw {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-defense_s.png');
+		  }
+		}
+		
+		&.defense-fire {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-fire-damage_s.png');
+		  }
+		}
+		
+		&.defense-water {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-water-elemental-damage_s.png');
+		  }
+		}
+		
+		&.defense-thunder {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-thunder-damage_s.png');
+		  }
+		}
+		
+		&.defense-ice {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-ice-damage_s.png');
+		  }
+		}
+		
+		&.defense-dragon {
+		  .status-name:before {
+			background-image: url('img/elements/mhw-dragon-damage_s.png');
+		  }
+		}
+	  }
+	}
+  }
 }

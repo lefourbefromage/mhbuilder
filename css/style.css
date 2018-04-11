@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
 @import "../app/custom_font/style.css";
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v7/o-0IIpQlx3QUlC5A4PNr5TRF.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v7/o-0NIpQlx3QUlC5A4PNjXhFVZNyE.ttf) format('truetype');
+}
 /* ---------------------------------------------------------------------------------- FONTS */
 html {
   font-size: 62.5%;
@@ -607,9 +618,199 @@ body {
 }
 .search-section .search-list {
   padding: 2rem;
-  height: 50rem;
-  background: url('img/pattern.jpg') no-repeat center;
+  background: url('img/pattern.jpg');
   background-size: cover;
   margin-bottom: 5rem;
+}
+.search-section .search-list .search-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-detail-wrapper {
+  width: 25%;
+  padding: 1rem;
+}
+.item-detail {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #4c4948;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.item-detail .item-title {
+  text-align: center;
+}
+.item-detail .item-title h3 {
+  color: white;
+  margin: 0;
+  padding-top: 1rem;
+}
+.item-detail .item-title .item-rarity {
+  margin-top: 0rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #9e9ca1;
+}
+.item-detail .item-title .item-rarity.rarity-5 {
+  color: #7921ee;
+}
+.item-detail .item-preview {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0 1rem;
+}
+.item-detail .item-preview .item-preview-img {
+  width: 50%;
+  padding: 1rem;
+}
+.item-detail .item-preview .item-preview-img img {
+  width: 100%;
+}
+.item-detail .item-informations .item-informations-title {
+  background: rgba(255, 255, 255, 0.1);
+  padding: .5rem .5rem .5rem 3rem;
+  position: relative;
+  color: white;
+}
+.item-detail .item-informations .item-informations-title:before {
+  content: '';
+  background: url('') no-repeat center;
+  background-size: 1rem;
+}
+.item-detail .item-informations .item-skills {
+  padding: 1rem 2rem;
+  list-style: none;
+  margin: 0;
+}
+.item-detail .item-informations .item-skills li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: .5rem;
+}
+.item-detail .item-informations .item-skills li img {
+  max-width: 2rem;
+  display: block;
+}
+.item-detail .item-informations .item-skills li p {
+  color: #cfee1d;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+.item-detail .item-informations .status-stats {
+  list-style: none;
+  padding: 1rem 0;
+  margin-bottom: 0;
+}
+.item-detail .item-informations .status-stats li {
+  font-size: 1.5rem;
+  display: flex;
+  padding: .5rem 2rem 0 2rem;
+}
+.item-detail .item-informations .status-stats li .status-name {
+  color: #9e9ca1;
+  width: 100%;
+  padding-left: 3rem;
+  position: relative;
+}
+.item-detail .item-informations .status-stats li .status-name:before {
+  content: '';
+  height: 100%;
+  width: 2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.item-detail .item-informations .status-stats li .status-value {
+  color: white;
+  position: relative;
+}
+.item-detail .item-informations .status-stats li .status-value.negative-value {
+  color: #e24747;
+}
+.item-detail .item-informations .status-stats li.decoration-slots .status-name:before {
+  background-image: url('img/elements/mhw-decoration_s.png');
+}
+.item-detail .item-informations .status-stats li.decoration-slots .status-value {
+  display: flex;
+}
+.item-detail .item-informations .status-stats li.decoration-slots .decorations-lvl {
+  padding: 0 .2rem;
+  width: 50%;
+  overflow: hidden;
+  height: 100%;
+}
+.item-detail .item-informations .status-stats li.decoration-slots .decorations-lvl img {
+  margin-top: -5px;
+  width: 100%;
+}
+.item-detail .item-informations .status-stats li.attack-raw .status-name:before {
+  background-image: url('img/elements/mhw-attack.png');
+}
+.item-detail .item-informations .status-stats li.attack-affinity .status-name:before {
+  background-image: url('img/elements/mhw-affinity.png');
+}
+.item-detail .item-informations .status-stats li.attack-element .status-name:before {
+  background-image: url('img/elements/mhw-element-damage.png');
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value {
+  padding-left: 2.5rem;
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value.disabled:before {
+  content: '';
+  opacity: 0.5;
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value:before {
+  content: '';
+  height: 100%;
+  width: 2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value.element-water:before {
+  background-image: url('img/elements/mhw-water-elemental-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value.element-fire:before {
+  background-image: url('img/elements/mhw-fire-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value.element-thunder:before {
+  background-image: url('img/elements/mhw-thunder-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value.element-ice:before {
+  background-image: url('img/elements/mhw-ice-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value.element-dragon:before {
+  background-image: url('img/elements/mhw-dragon-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.attack-element .status-value.negative-value {
+  color: #e24747;
+}
+.item-detail .item-informations .status-stats li.defense-raw .status-name:before {
+  background-image: url('img/elements/mhw-defense_s.png');
+}
+.item-detail .item-informations .status-stats li.defense-fire .status-name:before {
+  background-image: url('img/elements/mhw-fire-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.defense-water .status-name:before {
+  background-image: url('img/elements/mhw-water-elemental-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.defense-thunder .status-name:before {
+  background-image: url('img/elements/mhw-thunder-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.defense-ice .status-name:before {
+  background-image: url('img/elements/mhw-ice-damage_s.png');
+}
+.item-detail .item-informations .status-stats li.defense-dragon .status-name:before {
+  background-image: url('img/elements/mhw-dragon-damage_s.png');
 }
 /*# sourceMappingURL=style.css.map */
